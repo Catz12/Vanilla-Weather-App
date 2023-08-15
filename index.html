@@ -10,6 +10,7 @@
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>Weather App</title>
   </head>
@@ -19,10 +20,10 @@
         <div class="weather-app">
           <div class="row">
             <div class="col-8">
-              <h1 class="current-city">Zürich</h1>
+              <h1 class="current-city" id="city"></h1>
               <h3>
-                <span class="day-time" id="current-date">Sunday 16:13,</span>
-                <span class="description" id="description">cloudy</span>
+                <span class="day-time" id="date">Sunday 16:13,</span>
+                <span class="current-description" id="description"></span>
               </h3>
             </div>
             <div class="col-4">
@@ -34,7 +35,7 @@
                   class="float-left"
                 />
                 <div class="float-left">
-                  <strong class="temperature">17</strong>
+                  <strong class="current-temperature" id="temperature"></strong>
                   <span class="units"
                     ><a href="#" class="celsius">°C</a>
                     <a href="#" class="farhenheit">°F</a></span
@@ -45,11 +46,11 @@
                 <li>Precipitations: <span id="precipitations">0</span>%</li>
                 <li>
                   Humidity:
-                  <span id="humidity">58</span>%
+                  <span id="humidity"></span>%
                 </li>
                 <li>
                   Wind:
-                  <span id="wind">13</span>km/h
+                  <span id="wind"></span>Km/h
                 </li>
               </ul>
             </div>

@@ -26,6 +26,9 @@ h3 {
   font-weight: 750;
   line-height: 35px;
 }
+.current-description {
+  text-transform: capitalize;
+}
 
 .info-weather {
   list-style: none;
