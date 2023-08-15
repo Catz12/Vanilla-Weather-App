@@ -38,6 +38,7 @@ function displayTemperature(response) {
 }
 
 let apiKey = "3e326e9ac90aod9b4bff7t16c703f460";
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query=Zurich&key=${apiKey}&units=metric`;
+let city = Zurich;
+let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
 
 axios.get(apiUrl).then(displayTemperature);
