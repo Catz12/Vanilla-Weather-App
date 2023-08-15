@@ -15,8 +15,45 @@
   </head>
   <body>
     <div class="container">
-      <h1>Weather App</h1>
-      <a href="" class="btn btn-primary">Click me</a>
+      <div class="weather-app">
+        <div class="row">
+          <div class="col-8">
+            <h1 class="current-city">Zürich</h1>
+            <h3>
+              <span class="day-time" id="current-date">Sunday 16:13,</span>
+              <span class="description" id="description">cloudy</span>
+            </h3>
+          </div>
+          <div class="col-4">
+            <h2 class="current-temperature">
+              <span id="temperature">17</span>
+              <span><a href="#" class="celsius" id="link-celsius">°C</a></span>
+              <span><a href="#" class="farhenheit" id="link-fahr">°F</a></span>
+            </h2>
+            <ul class="info-weather">
+              <li>Precipitations: <span id="precipitations">0</span>%</li>
+              <li>
+                Humidity:
+                <span id="humidity">58</span>%
+              </li>
+              <li>
+                Wind:
+                <span id="wind">13</span>km/h
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <small>
+        <a
+          href="https://github.com/Catz12/Vanilla-Weather-App"
+          class="link-github"
+          target="_blank"
+        >
+          Open-source code</a
+        >
+        by Caterina Zazzara
+      </small>
     </div>
     <script src="src/app.js"></script>
   </body>
