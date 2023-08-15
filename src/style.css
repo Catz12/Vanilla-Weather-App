@@ -1,3 +1,56 @@
-h1 {
-  color: blue;
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 500px;
+  line-height: 25px;
+}
+
+.weather-app {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px;
+  border: 1px solid #908d8d;
+  border-radius: 10px;
+}
+
+.container {
+  margin: 100px;
+}
+
+.current-city {
+  font-size: 30px;
+  font-weight: 750;
+  line-height: 35px;
+}
+
+.info-weather {
+  list-style: none;
+  font-size: 13px;
+  font-weight: 200px;
+  line-height: 20px;
+  margin-top: 10px;
+  margin-left: 5px;
+  padding: 0;
+}
+
+.current-temperature {
+  font-size: 30px;
+  font-weight: 750;
+  line-height: 35px;
+}
+.celsius {
+  font-size: 30px;
+  font-weight: 750;
+  line-height: 35px;
+  text-decoration: none;
+}
+
+.farhenheit {
+  font-size: 30px;
+  font-weight: 750;
+  line-height: 35px;
+  text-decoration: none;
 }
