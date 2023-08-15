@@ -15,32 +15,44 @@
   </head>
   <body>
     <div class="container">
-      <div class="weather-app">
-        <div class="row">
-          <div class="col-9">
-            <h1 class="current-city">Zürich</h1>
-            <h3>
-              <span class="day-time" id="current-date">Sunday 16:13,</span>
-              <span class="description" id="description">cloudy</span>
-            </h3>
-          </div>
-          <div class="col-3">
-            <h2 class="current-temperature">
-              <span id="temperature">17</span>
-              <span><a href="#" class="celsius" id="link-celsius">°C</a></span>
-              <span><a href="#" class="farhenheit" id="link-fahr">°F</a></span>
-            </h2>
-            <ul class="info-weather">
-              <li>Precipitations: <span id="precipitations">0</span>%</li>
-              <li>
-                Humidity:
-                <span id="humidity">58</span>%
-              </li>
-              <li>
-                Wind:
-                <span id="wind">13</span>km/h
-              </li>
-            </ul>
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <div class="row">
+            <div class="col-8">
+              <h1 class="current-city">Zürich</h1>
+              <h3>
+                <span class="day-time" id="current-date">Sunday 16:13,</span>
+                <span class="description" id="description">cloudy</span>
+              </h3>
+            </div>
+            <div class="col-4">
+              <div class="d-flex current-weather">
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+                  alt="Clear"
+                  id="icon"
+                  class="float-left"
+                />
+                <div class="float-left">
+                  <strong class="temperature">17</strong>
+                  <span class="units"
+                    ><a href="#" class="celsius">°C</a>
+                    <a href="#" class="farhenheit">°F</a></span
+                  >
+                </div>
+              </div>
+              <ul class="info-weather">
+                <li>Precipitations: <span id="precipitations">0</span>%</li>
+                <li>
+                  Humidity:
+                  <span id="humidity">58</span>%
+                </li>
+                <li>
+                  Wind:
+                  <span id="wind">13</span>km/h
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         <small>
