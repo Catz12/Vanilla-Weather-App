@@ -58,12 +58,21 @@ h3 {
   top: -15px;
   left: -5px;
 }
-.celsius {
-  text-decoration: none;
+
+.current-weather .active {
   color: black;
+  cursor: default;
+  text-decoration: none;
 }
 
-.farhenheit {
+.current-weather .active:hover {
   text-decoration: none;
-  color: black;
+}
+
+.current-weather .inactive {
+  text-decoration: none;
+}
+
+.current-weather .inactive:hover {
+  text-decoration: none;
 }
