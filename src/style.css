@@ -7,18 +7,15 @@ h3 {
   font-weight: 500px;
   line-height: 25px;
 }
+
 .weather-app-wrapper {
   max-width: 600px;
-  margin: 0 auto;
+  margin: 30px auto;
 }
 .weather-app {
   padding: 40px;
   border: 1px solid #908d8d;
   border-radius: 10px;
-}
-
-.container {
-  margin: 100px;
 }
 
 .current-city {
