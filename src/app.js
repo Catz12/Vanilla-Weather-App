@@ -22,6 +22,30 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Fri", "Sat", "Sun", "Mon", "Tue", "Wed"];
+  days.forEach(function (days) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2">
+       <div class="forecast-date">${days}</div>
+       <img
+         src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png"
+         alt=""
+         width="45"
+       />
+       <div class="forecast-temperature"></div>
+       <span class="forecast-temperature-max">25°</span>
+       <span class="forecast-temperature-min">18°</span>
+     </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function displayTemperature(response) {
   console.log(response.data);
   let temperatureElement = document.querySelector("#temperature");
@@ -89,3 +113,4 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 search("Zurich");
+displayForecast();
