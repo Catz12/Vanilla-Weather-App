@@ -16,6 +16,37 @@ h3 {
   padding: 40px;
   border: 1px solid #908d8d;
   border-radius: 10px;
+  background: #fef3dd;
+  border: #fef3dd;
+  box-shadow: 5px 5px 10px#908d8d28;
+}
+
+.form-control {
+  height: 55px;
+  font-weight: 500;
+  font-size: 20px;
+  background-color: #ffecc0;
+  border: #ffecc0;
+  transition: ease-in-out 200ms;
+}
+
+.form-control:hover {
+  background: white;
+  border: white;
+}
+
+.btn-primary {
+  background: #939b62be;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  border: #939b62be;
+  height: 55px;
+  transition: ease-in-out 200ms;
+}
+
+.btn-primary:hover {
+  background: #666b44;
 }
 
 .current-city {
@@ -107,10 +138,17 @@ h3 {
 
 .forecast-temperature-max {
   font-size: 16px;
+  color: #ff7b54;
+  font-weight: 700;
 }
 
 .forecast-temperature-min {
   font-size: 16px;
-
+  color: #ff7b54;
   opacity: 0.8;
+}
+
+.link-github {
+  color: #666b44;
+  font-weight: 500;
 }
