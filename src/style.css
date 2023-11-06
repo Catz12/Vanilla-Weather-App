@@ -22,6 +22,7 @@ h3 {
   font-size: 35px;
   font-weight: 750;
   line-height: 35px;
+  margin-top: 15px;
 }
 
 .current-description {
@@ -39,15 +40,20 @@ h3 {
   opacity: 0.8;
 }
 
+.day-time {
+  margin-top: 20px;
+}
+
 .current-weather {
   font-size: 35px;
   font-weight: 750;
   line-height: 45px;
+  margin-top: 10px;
 }
 
 .current-weather img {
-  width: 45px;
-  height: 45px;
+  width: 65px;
+  height: 65px;
   margin-right: 3px;
 }
 .current-weather .units {
@@ -77,20 +83,34 @@ h3 {
 }
 
 .weather-forecast {
-  text-align: center;
+  display: flex;
+  justify-content: space-around;
   font-weight: 500;
-  margin-top: 20px;
+  margin-top: 30px;
+}
+
+.weather-forecast-day {
+  text-align: center;
+}
+
+.forecast-icon {
+  width: 65px;
+  height: 65px;
+  display: block;
+  margin: 0 auto;
 }
 
 .forecast-date {
   font-size: 16px;
+  text-align: center;
 }
 
 .forecast-temperature-max {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .forecast-temperature-min {
-  font-size: 14px;
+  font-size: 16px;
+
   opacity: 0.8;
 }

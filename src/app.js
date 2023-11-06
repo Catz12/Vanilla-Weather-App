@@ -44,7 +44,7 @@ function refreschWeather(response) {
   );
   iconElement.setAttribute("alt", response.data.condition.description);
 
-  getForcast(response.data.city);
+  getForecast(response.data.city);
 }
 
 function search(city) {
@@ -60,34 +60,46 @@ function handleSubmit(event) {
   search(cityInputElement.value);
 }
 
-function getForcast(city) {
+function getForecast(city) {
   let apiKey = "3e326e9ac90aod9b4bff7t16c703f460";
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
 
   axios.get(apiUrl).then(displayForecast);
 }
 
-function displayForecast() {
-  let forecastElement = document.querySelector("#forecast");
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
-  let forecastHTML = `<div class="row">`;
-  let days = ["Fri", "Sat", "Sun", "Mon", "Tue", "Wed"];
-  days.forEach(function (days) {
-    forecastHTML =
-      forecastHTML +
-      `<div class="col-2">
-       <div class="forecast-date">${days}</div>
-       <img
-         src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png"
-         alt=""
-         width="45"
+  return days[date.getDay()];
+}
+
+function displayForecast(response) {
+  let forecastHTML = "";
+
+  response.data.daily.forEach(function (day, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `
+      <div class= weather-forecast-day>
+       <div class="forecast-date">${formatDay(day.time)}</div>
+      <img
+         src="${day.condition.icon_url}" class="forecast-icon"
        />
-       <div class="forecast-temperature"></div>
-       <span class="forecast-temperature-max">25°</span>
-       <span class="forecast-temperature-min">18°</span>
+       <div class="forecast-temperature">
+       <span class="forecast-temperature-max">${Math.round(
+         day.temperature.maximum
+       )}°</span>
+       <span class="forecast-temperature-min">${Math.round(
+         day.temperature.minimum
+       )}°</span>
+     </div>
      </div>`;
+    }
   });
-  forecastHTML = forecastHTML + `</div>`;
+
+  let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = forecastHTML;
 }
 
@@ -122,4 +134,3 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 search("Zurich");
-displayForecast();
